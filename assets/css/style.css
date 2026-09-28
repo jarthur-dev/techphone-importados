@@ -1,0 +1,72 @@
+/* ESTILOS CUSTOMIZADOS E VARIÁVEIS VISUAIS */
+
+/* Importando a fonte Inter do Google Fonts pra deixar a tipografia moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Configurações globais do corpo da página */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0B0F17; /* Fundo escuro padrão (Dark Mode) */
+    color: #F3F4F6;            /* Cor do texto principal */
+    overflow-x: hidden;        /* Evita scroll horizontal indesejado no mobile */
+}
+
+/* Efeito Glassmorphism (efeito de vidro fosco para os cards) */
+.glass-card {
+    background: rgba(21, 28, 44, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Animação suave nos cards ao passar o mouse */
+.glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+    transform: translateY(-5px); /* Levanta o card levemente */
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.25);
+}
+
+/* Efeitos de brilho Neon (Glow) */
+.neon-glow-blue {
+    box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.5);
+}
+
+.neon-glow-green {
+    box-shadow: 0 0 20px -3px rgba(37, 211, 102, 0.4);
+}
+
+/* Gradiente de texto bonito para destaques */
+.text-gradient {
+    background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #00F2FE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar personalizada para combinar com o tema */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0B0F17;
+}
+::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3B82F6;
+}
+
+/* Animação de pulso usada em badges/destaques */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.03); }
+}
+.animate-pulse-slow {
+    animation: pulse-slow 3s infinite ease-in-out;
+}
