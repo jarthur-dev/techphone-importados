@@ -1,94 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="scroll-smooth dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TechPhone Importados | Smartphones Premium & Lacrados</title>
-    
+
     <!-- CDN do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Configuração das cores personalizadas do Tailwind
+        // Configuração das cores personalizadas do Tailwind atualizada para a paleta "Neon Orange & Slate"
         tailwind.config = {
-            darkMode: 'class',
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            blue: '#3B82F6',
-                            purple: '#8B5CF6',
-                            neon: '#00F2FE',
-                            whatsapp: '#25D366',
-                            whatsappHover: '#20ba5a',
-                            dark: '#0B0F17',
-                            card: '#151C2C',
-                            border: '#2A3447'
-                        }
+                            // Substituição das cores principais para Laranja Neon e Tons de Slate
+                            orange: "#FF6B00", // Laranja Neon Vibrante principal
+                            orangeHover: "#E05D00", // Tom de hover para botões laranjas
+                            neon: "#FF8800", // Laranja Neon secundário para brilhos e destaques
+                            slateDark: "#0F172A", // Fundo Slate ultra escuro (Slate-900)
+                            card: "#1E293B", // Fundo dos cards (Slate-800)
+                            border: "#334155", // Bordas discretas em tom Slate (Slate-700)
+
+                            // Mantidas as cores institucionais do WhatsApp
+                            whatsapp: "#25D366",
+                            whatsappHover: "#20ba5a",
+                        },
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
     </script>
-    
-    <!-- Ícones do FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS Customizado -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body class="antialiased selection:bg-brand-blue selection:text-white">
 
+    <!-- Ícones do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="antialiased selection:bg-brand-orange selection:text-white bg-brand-slateDark text-slate-100">
     <!-- HEADER / BARRA DE NAVEGAÇÃO FIXA -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-gray-800 transition-all duration-300" id="navbar">
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-800 transition-all duration-300"
+        id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
 
-                <!-- Logotipo -->
+                <!-- Logotipo com degradê Neon Orange -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue via-brand-purple to-brand-neon p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                        <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
-                            <i class="fa-solid fa-mobile-screen-button text-brand-neon text-lg"></i>
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-orange via-orange-500 to-amber-400 p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-brand-slateDark rounded-[10px] flex items-center justify-center">
+                            <i class="fa-solid fa-mobile-screen-button text-brand-orange text-lg"></i>
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <span class="text-xl font-black tracking-wider text-white flex items-center">
-                            TECH<span class="text-brand-blue">PHONE</span>
+                            TECH<span class="text-brand-orange">PHONE</span>
                         </span>
-                        <span class="text-[10px] tracking-widest text-gray-400 uppercase font-semibold -mt-1">Importados</span>
+                        <span
+                            class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold -mt-1">Importados</span>
                     </div>
                 </a>
 
-                <!-- Links de Navegação Desktop -->
+                <!-- Links de Navegação Desktop com hover em Neon Orange -->
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="#lancamentos" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Lançamentos</a>
-                    <a href="#modelos" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Modelos</a>
-                    <a href="#simulador" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Simulador Troca</a>
-                    <a href="#diferenciais" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Por Que Nós?</a>
-                    <a href="#depoimentos" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">Depoimentos</a>
-                    <a href="#faq" class="text-sm font-medium text-gray-300 hover:text-brand-blue transition-colors">FAQ</a>
+                    <a href="#lancamentos"
+                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Lançamentos</a>
+                    <a href="#modelos"
+                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Modelos</a>
+                    <a href="#simulador"
+                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Simulador
+                        Troca</a>
+                    <a href="#diferenciais"
+                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Por Que
+                        Nós?</a>
+                    <a href="#depoimentos"
+                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Depoimentos</a>
+                    <a href="#faq"
+                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">FAQ</a>
                 </nav>
 
                 <!-- Botão Hambúrguer para Telas Pequenas -->
-                <button id="mobile-menu-btn" aria-label="Abrir menu" class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800 focus:outline-none">
+                <button id="mobile-menu-btn" aria-label="Abrir menu"
+                    class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Menu Desdobrável Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-gray-800 px-4 pt-3 pb-6 space-y-3">
-            <a href="#lancamentos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Lançamentos</a>
-            <a href="#modelos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Modelos em Destaque</a>
-            <a href="#simulador" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Simulador de Troca</a>
-            <a href="#diferenciais" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Diferenciais</a>
-            <a href="#depoimentos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Depoimentos</a>
-            <a href="#faq" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Dúvidas Frequentes</a>
-            <a href="https://wa.me/5581999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20smartphones." 
-               target="_blank" 
-               class="flex items-center justify-center gap-2 bg-brand-whatsapp text-white w-full py-3 rounded-xl font-bold text-sm shadow-md mt-4">
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#lancamentos"
+                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Lançamentos</a>
+            <a href="#modelos"
+                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Modelos
+                em Destaque</a>
+            <a href="#simulador"
+                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Simulador
+                de Troca</a>
+            <a href="#diferenciais"
+                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Diferenciais</a>
+            <a href="#depoimentos"
+                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Depoimentos</a>
+            <a href="#faq"
+                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Dúvidas
+                Frequentes</a>
+            <a href="https://wa.me/5581999999999?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20smartphones."
+                target="_blank"
+                class="flex items-center justify-center gap-2 bg-brand-whatsapp text-white w-full py-3 rounded-xl font-bold text-sm shadow-md mt-4">
                 <i class="fa-brands fa-whatsapp text-lg"></i>
                 <span>Chamar no WhatsApp</span>
             </a>
@@ -100,141 +125,189 @@
         <!-- HERO SECTION (SEÇÃO PRINCIPAL DE IMPACTO) -->
         <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden" id="lancamentos">
 
-            <!-- Esferas de iluminação neon no fundo -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-blue/15 rounded-full blur-[140px] -z-10 pointer-events-none"></div>
-            <div class="absolute top-1/3 right-10 w-[350px] h-[350px] bg-brand-purple/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+            <!-- Esferas de iluminação Neon Orange e Amber no fundo -->
+            <div
+                class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-orange/15 rounded-full blur-[140px] -z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute top-1/3 right-10 w-[350px] h-[350px] bg-amber-500/10 rounded-full blur-[120px] -z-10 pointer-events-none">
+            </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
+
                     <!-- Lado Esquerdo: Textos de Venda e Chamada de Ação -->
                     <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-blue/30 text-brand-neon text-xs sm:text-sm font-semibold tracking-wide">
-                            <span class="w-2 h-2 rounded-full bg-brand-neon animate-ping"></span>
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-orange/30 text-brand-orange text-xs sm:text-sm font-semibold tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
                             <span>Produtos 100% Originais com 1 Ano de Garantia</span>
                         </div>
 
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
-                            Seu próximo Smartphone <br class="hidden sm:inline"/>
-                            <span class="text-gradient">Importado & Lacrado</span> pelo menor preço!
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+                            Seu próximo Smartphone <br class="hidden sm:inline" />
+                            <span class="text-gradient">Importado & Lacrado</span> pelo
+                            menor preço!
                         </h1>
 
-                        <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
-                            Linha completa de Apple iPhone, Samsung Galaxy Ultra e Xiaomi com pronta entrega, envio para todo o Brasil e pagamento facilitado em até 18x no cartão.
+                        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
+                            Linha completa de Apple iPhone, Samsung Galaxy Ultra e Xiaomi
+                            com pronta entrega, envio para todo o Brasil e pagamento
+                            facilitado em até 18x no cartão.
                         </p>
 
                         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                            <a href="#modelos" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-blue to-brand-purple hover:opacity-90 text-white rounded-xl font-bold text-center shadow-lg neon-glow-blue transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                            <a href="#modelos"
+                                class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-orange to-amber-500 hover:opacity-90 text-white rounded-xl font-bold text-center shadow-lg neon-glow-orange transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
                                 <span>Ver Ofertas do Dia</span>
                                 <i class="fa-solid fa-arrow-right text-sm"></i>
                             </a>
                         </div>
 
                         <!-- Métricas de Prova Social -->
-                        <div class="pt-8 border-t border-gray-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div class="pt-8 border-t border-slate-800 grid grid-cols-3 gap-4 text-center lg:text-left">
                             <div>
-                                <p class="text-2xl sm:text-3xl font-black text-white">+3.500</p>
-                                <p class="text-xs sm:text-sm text-gray-400 font-medium">Clientes Satisfeitos</p>
+                                <p class="text-2xl sm:text-3xl font-black text-white">
+                                    +3.500
+                                </p>
+                                <p class="text-xs sm:text-sm text-slate-400 font-medium">
+                                    Clientes Satisfeitos
+                                </p>
                             </div>
                             <div>
                                 <p class="text-2xl sm:text-3xl font-black text-white">100%</p>
-                                <p class="text-xs sm:text-sm text-gray-400 font-medium">Originais Lacrados</p>
+                                <p class="text-xs sm:text-sm text-slate-400 font-medium">
+                                    Originais Lacrados
+                                </p>
                             </div>
                             <div>
-                                <p class="text-2xl sm:text-3xl font-black text-white">12 Meses</p>
-                                <p class="text-xs sm:text-sm text-gray-400 font-medium">Garantia Completa</p>
+                                <p class="text-2xl sm:text-3xl font-black text-white">
+                                    12 Meses
+                                </p>
+                                <p class="text-xs sm:text-sm text-slate-400 font-medium">
+                                    Garantia Completa
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Lado Direito: Card do Produto em Destaque no Hero -->
+                    <!-- Lado Direito: Carrossel dos 5 Produtos Mais Vendidos -->
                     <div class="lg:col-span-5 relative">
                         <div class="relative mx-auto max-w-md lg:max-w-none">
-                            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-blue via-brand-purple to-brand-neon opacity-40 blur-xl"></div>
-                            
-                            <div class="relative glass-card rounded-3xl p-6 sm:p-8 space-y-6">
-                                <div class="flex items-center justify-between">
-                                    <span class="bg-brand-blue/20 text-brand-neon border border-brand-blue/40 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                        🔥 Mais Vendido
-                                    </span>
-                                    <div class="flex items-center gap-1 text-yellow-400 text-sm font-bold">
-                                        <i class="fa-solid fa-star"></i>
-                                        <span>4.9 / 5.0</span>
+
+                            <!-- Glow Laranja de Fundo -->
+                            <div
+                                class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-orange via-amber-500 to-brand-neon opacity-30 blur-xl">
+                            </div>
+
+                            <!-- Contentor Principal -->
+                            <div class="relative glass-card rounded-3xl p-6 sm:p-8 overflow-hidden"
+                                id="hero-carousel-container">
+
+                                <!-- Título Fixo no Topo do Carrossel -->
+                                <div class="flex items-center justify-between pb-4 border-b border-slate-800/80 mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-fire text-brand-orange text-xs animate-pulse"></i>
+                                        <h3 class="text-xs font-black tracking-widest text-brand-orange uppercase">
+                                            A Elite Da Nossa Loja
+                                        </h3>
                                     </div>
                                 </div>
 
-                                <div class="relative py-4 flex justify-center group">
-                                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" 
-                                         alt="iPhone 15 Pro Max Natural Titanium" 
-                                         class="h-64 sm:h-72 object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.7)] group-hover:scale-105 transition-transform duration-500 rounded-2xl"
-                                         onerror="this.src='https://placehold.co/400x500/151C2C/ffffff?text=iPhone+15+Pro+Max'">
-                                </div>
+                                <!-- Botões de Navegação (Setas) -->
+                                <button id="carousel-prev" aria-label="Produto anterior"
+                                    class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-slate-900/90 hover:bg-brand-orange border border-slate-700 hover:border-brand-orange text-white flex items-center justify-center transition-all shadow-xl">
+                                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                                </button>
 
-                                <div>
-                                    <h3 class="text-2xl font-extrabold text-white">iPhone 15 Pro Max</h3>
-                                    <p class="text-xs text-gray-400 mt-1">Titânio Natural • 256GB • Câmera 48MP</p>
-                                </div>
+                                <button id="carousel-next" aria-label="Próximo produto"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-slate-900/90 hover:bg-brand-orange border border-slate-700 hover:border-brand-orange text-white flex items-center justify-center transition-all shadow-xl">
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </button>
 
-                                <div class="flex items-end justify-between pt-2 border-t border-gray-800">
-                                    <div>
-                                        <p class="text-xs text-gray-400 line-through">De R$ 8.999,00</p>
-                                        <p class="text-2xl font-black text-brand-neon">R$ 6.890<span class="text-sm font-normal text-gray-300">,00</span></p>
-                                        <p class="text-[11px] text-brand-whatsapp font-medium">À vista no Pix com 10% OFF</p>
+                                <!-- Área dos Slides com Clipping Perfeito -->
+                                <div class="overflow-hidden w-full">
+                                    <div id="hero-carousel-track"
+                                        class="flex transition-transform duration-500 ease-out w-full">
+                                        <!-- Renderizado via script.js -->
                                     </div>
-                                    <a href="https://wa.me/5581999999999?text=Olá!%20Tenho%20interesse%20no%20iPhone%2015%20Pro%20Max%20Titânio." 
-                                       target="_blank" 
-                                       class="p-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white rounded-xl shadow-md transition-transform hover:scale-110"
-                                       title="Garantir Oferta">
-                                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                                    </a>
                                 </div>
+
+                                <!-- Indicadores (Dots) -->
+                                <div class="flex items-center justify-center gap-2 pt-4 border-t border-slate-800/80 mt-4"
+                                    id="carousel-dots">
+                                    <!-- Renderizado via script.js -->
+                                </div>
+
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- DIFERENCIAIS / VANTAGENS DE COMPRAR NA LOJA -->
-        <section class="py-16 bg-brand-card/50 border-y border-gray-800/80" id="diferenciais">
+        <section class="py-16 bg-brand-card/50 border-y border-slate-800" id="diferenciais">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-3xl font-extrabold text-white">Por que escolher a TechPhone?</h2>
-                    <p class="text-gray-400 text-sm mt-2">Segurança, agilidade e total procedência em cada negociação.</p>
+                    <h2 class="text-3xl font-extrabold text-white">
+                        Por que escolher a TechPhone?
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-2">
+                        Segurança, agilidade e total procedência em cada negociação.
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="glass-card p-6 rounded-2xl glass-card-hover space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl">
                             <i class="fa-solid fa-box-open"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white">100% Originais & Lacrados</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed">Todos os aparelhos são novos, de fábrica, com caixas seladas e código de homologação oficial.</p>
+                        <h3 class="text-lg font-bold text-white">
+                            100% Originais & Lacrados
+                        </h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Todos os aparelhos são novos, de fábrica, com caixas seladas e
+                            código de homologação oficial.
+                        </p>
                     </div>
 
                     <div class="glass-card p-6 rounded-2xl glass-card-hover space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 text-xl">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h3 class="text-lg font-bold text-white">Garantia de 1 Ano</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed">Garantia oficial do fabricante + suporte exclusivo direto com nossa equipe especializada.</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Garantia oficial do fabricante + suporte exclusivo direto com
+                            nossa equipe especializada.
+                        </p>
                     </div>
 
                     <div class="glass-card p-6 rounded-2xl glass-card-hover space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brand-neon/10 border border-brand-neon/30 flex items-center justify-center text-brand-neon text-xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl">
                             <i class="fa-solid fa-truck-fast"></i>
                         </div>
                         <h3 class="text-lg font-bold text-white">Entrega Expressa</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed">Entrega via motoboy no mesmo dia para a região e envio seguro via Sedex Express para todo Brasil.</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Entrega via motoboy no mesmo dia para a região e envio seguro
+                            via Sedex Express para todo Brasil.
+                        </p>
                     </div>
 
                     <div class="glass-card p-6 rounded-2xl glass-card-hover space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brand-whatsapp/10 border border-brand-whatsapp/30 flex items-center justify-center text-brand-whatsapp text-xl">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-whatsapp/10 border border-brand-whatsapp/30 flex items-center justify-center text-brand-whatsapp text-xl">
                             <i class="fa-solid fa-credit-card"></i>
                         </div>
                         <h3 class="text-lg font-bold text-white">Até 18x no Cartão</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed">Aceitamos todos os cartões com as melhores taxas do mercado. Aceitamos também seu semi-novo!</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Aceitamos todos os cartões com as melhores taxas do mercado.
+                            Aceitamos também seu semi-novo!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -243,36 +316,48 @@
         <!-- CATÁLOGO DE PRODUTOS COM BUSCA E FILTROS DINÂMICOS -->
         <section class="py-20" id="modelos">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                     <div>
-                        <span class="text-brand-blue font-semibold text-xs tracking-widest uppercase">Catálogo Atualizado</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Smartphones em Destaque</h2>
+                        <span class="text-brand-orange font-semibold text-xs tracking-widest uppercase">Catálogo
+                            Atualizado</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">
+                            Smartphones em Destaque
+                        </h2>
                     </div>
 
                     <!-- Campo de Busca em Tempo Real -->
                     <div class="relative w-full md:w-72">
-                        <input type="text" id="catalog-search" placeholder="Buscar modelo ex: S24 Ultra..." 
-                               class="w-full bg-brand-card border border-gray-800 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-brand-blue transition-colors">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-gray-500 text-sm"></i>
+                        <input type="text" id="catalog-search" placeholder="Buscar modelo ex: S24 Ultra..."
+                            class="w-full bg-brand-card border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors" />
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
                     </div>
                 </div>
 
                 <!-- Botões de Filtro por Marca -->
                 <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar" id="brand-filters">
-                    <button class="filter-btn active px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-brand-blue text-white shadow-md" data-category="all">
+                    <button
+                        class="filter-btn active px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-brand-orange text-white shadow-md"
+                        data-category="all">
                         Todos os Modelos
                     </button>
-                    <button class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-gray-300 hover:text-white hover:border-brand-blue" data-category="apple">
-                        <i class="fa-brands fa-apple mr-1"></i> Apple iPhone
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="apple">
+                        <i class="fa-brands fa-apple mr-1"></i> Apple
                     </button>
-                    <button class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-gray-300 hover:text-white hover:border-brand-blue" data-category="samsung">
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="samsung">
                         Samsung Galaxy
                     </button>
-                    <button class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-gray-300 hover:text-white hover:border-brand-blue" data-category="xiaomi">
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="xiaomi">
                         Xiaomi & Poco
                     </button>
-                    <button class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-gray-300 hover:text-white hover:border-brand-blue" data-category="acessorios">
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="acessorios">
                         Acessórios Premium
                     </button>
                 </div>
@@ -281,76 +366,139 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
                     <!-- Conteúdo gerado dinamicamente via script.js -->
                 </div>
-
             </div>
         </section>
 
         <!-- SIMULADOR DE TRADE-IN / TROCA DE USADO -->
-        <section class="py-20 bg-gradient-to-b from-brand-card/40 to-brand-dark border-y border-gray-800" id="simulador">
+        <section class="py-20 bg-gradient-to-b from-brand-card/40 to-brand-slateDark border-y border-slate-800"
+            id="simulador">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-blue/30 relative overflow-hidden">
-                    
-                    <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none"></div>
-
-                    <div class="text-center max-w-2xl mx-auto mb-8">
-                        <span class="bg-brand-purple/20 text-brand-purple border border-brand-purple/40 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Programa de Troca Smart
-                        </span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Simulador de Trade-In</h2>
-                        <p class="text-gray-400 text-sm mt-2">Use seu smartphone atual como parte do pagamento para pegar um novo lacrado!</p>
+                <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-orange/30 relative overflow-hidden">
+                    <div
+                        class="absolute -right-10 -bottom-10 w-60 h-60 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none">
                     </div>
 
-                    <!-- Formulário Interativo do Simulador -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider">1. Qual seu aparelho atual?</label>
-                            <select id="current-phone" class="w-full bg-brand-dark border border-gray-700 rounded-xl p-3.5 text-sm text-white focus:outline-none focus:border-brand-blue">
-                                <option value="" disabled selected>Selecione seu modelo atual...</option>
-                                <option value="1200" data-name="iPhone 11 (64GB/128GB)">iPhone 11</option>
-                                <option value="1800" data-name="iPhone 12 (128GB)">iPhone 12</option>
-                                <option value="2500" data-name="iPhone 13 (128GB)">iPhone 13</option>
-                                <option value="3200" data-name="iPhone 14 (128GB)">iPhone 14</option>
-                                <option value="1500" data-name="Samsung S22 Ultra">Samsung Galaxy S22 Ultra</option>
-                                <option value="2800" data-name="Samsung S23 Ultra">Samsung Galaxy S23 Ultra</option>
-                                <option value="1000" data-name="Xiaomi Redmi / Poco recente">Xiaomi / Poco Recente</option>
-                            </select>
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span
+                            class="bg-brand-orange/20 text-brand-orange border border-brand-orange/40 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Programa de Troca Smart
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+                            Simulador de Trade-In
+                        </h2>
+                        <p class="text-slate-400 text-sm mt-2">
+                            Digite os dados do seu aparelho atual e veja quanto falta para pegar um novo lacrado!
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+
+                        <div class="space-y-2 md:col-span-1">
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                                1. Qual seu aparelho atual?
+                            </label>
+                            <input type="text" id="current-phone-name" placeholder="Ex: iPhone 12 128GB"
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 px-4 text-sm text-white focus:outline-none focus:border-brand-orange transition-all placeholder:text-slate-500" />
                         </div>
 
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider">2. Estado de conservação</label>
-                            <select id="phone-condition" class="w-full bg-brand-dark border border-gray-700 rounded-xl p-3.5 text-sm text-white focus:outline-none focus:border-brand-blue">
-                                <option value="1.0">Excelente (Sem marcas, bateria 85%+)</option>
-                                <option value="0.85">Bom (Marcas leves de uso normal)</option>
-                                <option value="0.7">Regular (Marcas visíveis ou bateria baixa)</option>
-                            </select>
+                        <div class="space-y-2 md:col-span-1">
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                                Valor aproximado hoje (R$)
+                            </label>
+                            <input type="number" id="current-phone-value" min="100" max="20000" step="50"
+                                placeholder="Ex: 1800"
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 px-4 text-sm text-white focus:outline-none focus:border-brand-orange transition-all placeholder:text-slate-500" />
+                        </div>
+
+                        <div class="space-y-2 md:col-span-1">
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                                2. Estado de conservação
+                            </label>
+                            <div class="relative group">
+                                <select id="phone-condition"
+                                    class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-orange appearance-none cursor-pointer group-focus-within:border-brand-orange transition-all">
+                                    <option value="1.0">Excelente (Sem marcas, bateria 85%+)</option>
+                                    <option value="0.85" selected>Bom (Marcas leves de uso normal)</option>
+                                    <option value="0.7">Regular (Marcas visíveis ou bateria baixa)</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none transition-transform duration-300 group-focus-within:rotate-180 group-focus-within:text-brand-orange text-xs"></i>
+                            </div>
                         </div>
                     </div>
 
                     <div class="mt-6 space-y-2">
-                        <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider">3. Qual aparelho deseja adquirir?</label>
-                        <select id="target-phone" class="w-full bg-brand-dark border border-gray-700 rounded-xl p-3.5 text-sm text-white focus:outline-none focus:border-brand-blue">
-                            <option value="6890" data-targetname="iPhone 15 Pro Max 256GB">iPhone 15 Pro Max 256GB (R$ 6.890)</option>
-                            <option value="5490" data-targetname="iPhone 15 Pro 128GB">iPhone 15 Pro 128GB (R$ 5.490)</option>
-                            <option value="4290" data-targetname="iPhone 15 128GB">iPhone 15 128GB (R$ 4.290)</option>
-                            <option value="5890" data-targetname="Samsung Galaxy S24 Ultra">Samsung Galaxy S24 Ultra (R$ 5.890)</option>
-                            <option value="5190" data-targetname="Xiaomi 14 Ultra">Xiaomi 14 Ultra (R$ 5.190)</option>
-                        </select>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                            3. Qual aparelho deseja adquirir?
+                        </label>
+                        <div class="relative group">
+                            <select id="target-phone"
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-orange appearance-none cursor-pointer group-focus-within:border-brand-orange transition-all optgroup:text-brand-orange optgroup:font-bold optgroup:not-italic optgroup:bg-brand-slateDark option:text-white option:font-normal option:bg-brand-slateDark">
+
+                                <optgroup label="Smartphones Apple">
+                                    <option value="6890" data-targetname="iPhone 15 Pro Max 256GB">iPhone 15 Pro Max -
+                                        R$ 6.890,00</option>
+                                    <option value="5600" data-targetname="iPhone 15 Pro 128GB">iPhone 15 Pro - R$
+                                        5.600,00</option>
+                                    <option value="3790" data-targetname="iPhone 14 128GB">iPhone 14 - R$ 3.790,00
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="Smartphones Samsung">
+                                    <option value="3899" data-targetname="Samsung Galaxy S24 Ultra 512GB">Samsung Galaxy
+                                        S24 Ultra - R$ 3.899,00</option>
+                                </optgroup>
+
+                                <optgroup label="Smartphones Xiaomi">
+                                    <option value="4300" data-targetname="Redmi Magic 11 Pro 512GB">Redmi Magic 11 Pro -
+                                        R$ 4.300,00</option>
+                                    <option value="3353" data-targetname="Redmi Note 17 Pro Max 512GB">Redmi Note 17 Pro
+                                        Max - R$ 3.353,00</option>
+                                    <option value="1500" data-targetname="Redmi Note 15 PRO 256GB">Redmi Note 15 PRO -
+                                        R$ 1.500,00</option>
+                                </optgroup>
+
+                                <optgroup label="Tablets">
+                                    <option value="6000" data-targetname="Apple iPad 11 512GB">Apple iPad 11 - R$
+                                        6.000,00</option>
+                                    <option value="6000" data-targetname="Samsung Galaxy Tab S11 512GB">Samsung Galaxy
+                                        Tab S11 - R$ 6.000,00</option>
+                                    <option value="1800" data-targetname="Poco Pad X1 512GB">Poco Pad X1 - R$ 1.800,00
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="Acessórios">
+                                    <option value="2300" data-targetname="AirPods Pro 3">AirPods Pro 3 - R$ 2.300,00
+                                    </option>
+                                    <option value="360" data-targetname="Samsung Galaxy Buds Core">Samsung Galaxy Buds
+                                        Core - R$ 360,00</option>
+                                </optgroup>
+                            </select>
+                            <i
+                                class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none transition-transform duration-300 group-focus-within:rotate-180 group-focus-within:text-brand-orange text-xs"></i>
+                        </div>
                     </div>
 
-                    <!-- Resultado do Cálculo -->
-                    <div id="estimator-result" class="mt-8 p-6 bg-brand-dark/80 rounded-2xl border border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div id="estimator-result"
+                        class="mt-8 p-6 bg-brand-slateDark/80 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
                         <div>
-                            <p class="text-xs text-gray-400 uppercase font-semibold">Estimativa de Avaliação do Seu Usado</p>
-                            <p class="text-2xl font-black text-brand-neon" id="estimated-value">R$ 0,00</p>
-                            <p class="text-xs text-gray-400 mt-1" id="difference-text">Selecione os modelos acima para ver a diferença.</p>
+                            <p class="text-xs text-slate-400 uppercase font-semibold">
+                                Estimativa de Avaliação do Seu Usado
+                            </p>
+                            <p class="text-2xl font-black text-brand-orange" id="estimated-value">
+                                R$ 0,00
+                            </p>
+                            <p class="text-xs text-slate-400 mt-1" id="difference-text">
+                                Informe o valor do seu modelo para calcularmos a diferença.
+                            </p>
                         </div>
 
-                        <button id="send-tradein-whatsapp" disabled class="w-full sm:w-auto px-6 py-3.5 bg-brand-whatsapp opacity-50 cursor-not-allowed text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2">
+                        <button id="send-tradein-whatsapp"
+                            class="w-full sm:w-auto px-6 py-3.5 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2 transform active:scale-95">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             <span>Enviar Proposta via WhatsApp</span>
                         </button>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -358,40 +506,49 @@
         <!-- DEPOIMENTOS / PROVA SOCIAL -->
         <section class="py-20" id="depoimentos">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-brand-blue font-semibold text-xs tracking-widest uppercase">Prova Social</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Quem compra com a gente, recomenda!</h2>
-                    <p class="text-gray-400 text-sm mt-2">Transparência e pontualidade no envio para todo o Brasil.</p>
+                    <span class="text-brand-orange font-semibold text-xs tracking-widest uppercase">Prova Social</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">
+                        Quem compra com a gente, recomenda!
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-2">
+                        Transparência e pontualidade no envio para todo o Brasil.
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
                         <div class="space-y-3">
                             <div class="flex items-center justify-between">
-                                <div class="flex text-yellow-400 text-xs gap-1">
+                                <div class="flex text-amber-400 text-xs gap-1">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
+                                <span
+                                    class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
                                     <i class="fa-solid fa-circle-check"></i> Compra Verificada
                                 </span>
                             </div>
-                            <p class="text-gray-300 text-sm italic">
-                                "Comprei o iPhone 15 Pro Max e chegou no dia seguinte aqui no Recife! Veio lacrado na caixa, nota de garantia bonitinha. Sensacional o atendimento pelo Whats."
+                            <p class="text-slate-300 text-sm italic">
+                                "Comprei o iPhone 15 Pro Max e chegou no dia seguinte aqui no
+                                Recife! Veio lacrado na caixa, nota de garantia bonitinha.
+                                Sensacional o atendimento pelo Whats."
                             </p>
                         </div>
 
-                        <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center font-bold text-white text-sm">
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-500 to-amber-500 flex items-center justify-center font-bold text-white text-sm">
                                 CS
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-white">Carlos Silva</h4>
-                                <p class="text-xs text-gray-500">Recife - PE • iPhone 15 Pro Max</p>
+                                <p class="text-xs text-slate-400">
+                                    Recife - PE • iPhone 15 Pro Max
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -399,29 +556,35 @@
                     <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
                         <div class="space-y-3">
                             <div class="flex items-center justify-between">
-                                <div class="flex text-yellow-400 text-xs gap-1">
+                                <div class="flex text-amber-400 text-xs gap-1">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
+                                <span
+                                    class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
                                     <i class="fa-solid fa-circle-check"></i> Compra Verificada
                                 </span>
                             </div>
-                            <p class="text-gray-300 text-sm italic">
-                                "Fiz a troca do meu iPhone 12 antigo pelo S24 Ultra. A avaliação do meu seminovo foi super honesta e o processo muito rápido. Recomendo demais!"
+                            <p class="text-slate-300 text-sm italic">
+                                "Fiz a troca do meu iPhone 12 antigo pelo S24 Ultra. A
+                                avaliação do meu seminovo foi super honesta e o processo muito
+                                rápido. Recomendo demais!"
                             </p>
                         </div>
 
-                        <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm">
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm">
                                 AM
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-white">Amanda Melo</h4>
-                                <p class="text-xs text-gray-500">Olinda - PE • Samsung S24 Ultra</p>
+                                <p class="text-xs text-slate-400">
+                                    Olinda - PE • Samsung S24 Ultra
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -429,29 +592,35 @@
                     <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
                         <div class="space-y-3">
                             <div class="flex items-center justify-between">
-                                <div class="flex text-yellow-400 text-xs gap-1">
+                                <div class="flex text-amber-400 text-xs gap-1">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
+                                <span
+                                    class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
                                     <i class="fa-solid fa-circle-check"></i> Compra Verificada
                                 </span>
                             </div>
-                            <p class="text-gray-300 text-sm italic">
-                                "Preço imbatível comparado com as lojas de shopping. Peguei o Xiaomi 14 Ultra com eles. Atendimento rápido e tiraram todas as minhas dúvidas."
+                            <p class="text-slate-300 text-sm italic">
+                                "Preço imbatível comparado com as lojas de shopping. Peguei o
+                                Xiaomi 14 Ultra com eles. Atendimento rápido e tiraram todas
+                                as minhas dúvidas."
                             </p>
                         </div>
 
-                        <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-rose-500 flex items-center justify-center font-bold text-white text-sm">
+                        <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-600 to-amber-600 flex items-center justify-center font-bold text-white text-sm">
                                 RF
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-white">Rodrigo Ferreira</h4>
-                                <p class="text-xs text-gray-500">Jaboatão - PE • Xiaomi 14 Ultra</p>
+                                <p class="text-xs text-slate-400">
+                                    Jaboatão - PE • Xiaomi 14 Ultra
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -460,134 +629,186 @@
         </section>
 
         <!-- PERGUNTAS FREQUENTES (FAQ ACCORDION) -->
-        <section class="py-20 bg-brand-card/30 border-t border-gray-800" id="faq">
+        <section class="py-20 bg-brand-card/30 border-t border-slate-800" id="faq">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                
                 <div class="text-center mb-12">
-                    <span class="text-brand-blue font-semibold text-xs tracking-widest uppercase">Tire suas dúvidas</span>
-                    <h2 class="text-3xl font-extrabold text-white mt-1">Perguntas Frequentes</h2>
+                    <span class="text-brand-orange font-semibold text-xs tracking-widest uppercase">Tire suas
+                        dúvidas</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-1">
+                        Perguntas Frequentes
+                    </h2>
                 </div>
 
                 <div class="space-y-4" id="faq-accordion">
-                    <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
-                        <button class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-blue transition-colors">
+                    <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                        <button
+                            class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-orange transition-colors">
                             <span>Os produtos são realmente novos e originais?</span>
-                            <i class="fa-solid fa-chevron-down text-sm text-gray-400 transition-transform duration-300"></i>
+                            <i
+                                class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
-                            Sim! Trabalhamos apenas com produtos 100% originais, novos, lacrados na caixa de fábrica e com garantia oficial. Você pode checar o número de série no site oficial do fabricante (Apple, Samsung, Xiaomi) assim que receber.
+                        <div
+                            class="faq-content hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-slate-800/50 pt-3">
+                            Sim! Trabalhamos apenas com produtos 100% originais, novos,
+                            lacrados na caixa de fábrica e com garantia oficial. Você pode
+                            checar o número de série no site oficial do fabricante (Apple,
+                            Samsung, Xiaomi) assim que receber.
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
-                        <button class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-blue transition-colors">
+                    <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                        <button
+                            class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-orange transition-colors">
                             <span>Como funciona a Garantia de 1 Ano?</span>
-                            <i class="fa-solid fa-chevron-down text-sm text-gray-400 transition-transform duration-300"></i>
+                            <i
+                                class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
-                            Todos os aparelhos contam com a garantia oficial de 12 meses do próprio fabricante + o suporte direto da nossa loja para auxiliar com qualquer eventualidade no pós-venda.
+                        <div
+                            class="faq-content hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-slate-800/50 pt-3">
+                            Todos os aparelhos contam com a garantia oficial de 12 meses do
+                            próprio fabricante + o suporte direto da nossa loja para
+                            auxiliar com qualquer eventualidade no pós-venda.
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
-                        <button class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-blue transition-colors">
+                    <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                        <button
+                            class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-orange transition-colors">
                             <span>Quais as formas de pagamento aceitas?</span>
-                            <i class="fa-solid fa-chevron-down text-sm text-gray-400 transition-transform duration-300"></i>
+                            <i
+                                class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
-                            Aceitamos PIX (com desconto especial de até 10%), cartões de crédito em até 18x com as melhores taxas, e também aceitamos o seu aparelho seminovo como parte do pagamento na troca.
+                        <div
+                            class="faq-content hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-slate-800/50 pt-3">
+                            Aceitamos PIX (com desconto especial de até 10%), cartões de
+                            crédito em até 18x com as melhores taxas, e também aceitamos o
+                            seu aparelho seminovo como parte do pagamento na troca.
                         </div>
                     </div>
 
-                    <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
-                        <button class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-blue transition-colors">
+                    <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+                        <button
+                            class="faq-toggle w-full p-5 text-left font-semibold text-white flex items-center justify-between hover:text-brand-orange transition-colors">
                             <span>Qual o prazo e formas de entrega?</span>
-                            <i class="fa-solid fa-chevron-down text-sm text-gray-400 transition-transform duration-300"></i>
+                            <i
+                                class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-5 pb-5 text-sm text-gray-400 leading-relaxed border-t border-gray-800/50 pt-3">
-                            Para clientes locais, oferecemos entrega via Motoboy Express com recebimento no mesmo dia ou opção de retirada em mãos com pagamento no ato. Para demais regiões do Brasil, enviamos via Sedex Express com seguro total da carga.
+                        <div
+                            class="faq-content hidden px-5 pb-5 text-sm text-slate-400 leading-relaxed border-t border-slate-800/50 pt-3">
+                            Para clientes locais, oferecemos entrega via Motoboy Express com
+                            recebimento no mesmo dia ou opção de retirada em mãos com
+                            pagamento no ato. Para demais regiões do Brasil, enviamos via
+                            Sedex Express com seguro total da carga.
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP (FIXO NO CANTO INFERIOR) -->
-    <a href="https://wa.me/5581999999999?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20smartphones." 
-       target="_blank" 
-       aria-label="Falar no WhatsApp"
-       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-brand-whatsapp text-white rounded-full flex items-center justify-center text-3xl shadow-2xl neon-glow-green hover:scale-110 active:scale-95 transition-all duration-300 group">
+    <a href="https://wa.me/5581999999999?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20os%20smartphones."
+        target="_blank" aria-label="Falar no WhatsApp"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-brand-whatsapp text-white rounded-full flex items-center justify-center text-3xl shadow-2xl neon-glow-green hover:scale-110 active:scale-95 transition-all duration-300 group">
         <i class="fa-brands fa-whatsapp"></i>
-        <span class="absolute right-16 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg border border-gray-800">
+        <span
+            class="absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg border border-slate-800">
             Falar no WhatsApp
         </span>
     </a>
 
     <!-- RODAPÉ / FOOTER -->
-    <footer class="bg-brand-dark border-t border-gray-800 pt-16 pb-12 text-gray-400 text-sm">
+    <footer class="bg-brand-slateDark border-t border-slate-800 pt-16 pb-12 text-slate-400 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-brand-blue flex items-center justify-center text-white">
+                        <div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-white">
                             <i class="fa-solid fa-mobile-screen-button"></i>
                         </div>
                         <span class="text-lg font-black text-white">TECHPHONE</span>
                     </div>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        Especialistas na importação de smartphones de alta performance. Garantia, nota e procedência garantida.
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Especialistas na importação de smartphones de alta performance.
+                        Garantia, nota e procedência garantida.
                     </p>
-                    <div class="flex gap-4 text-gray-400 pt-2">
-                        <a href="#" aria-label="Instagram" class="text-lg transition-transform duration-300 hover:scale-110 inline-block">
-                            <i class="fa-brands fa-instagram text-transparent bg-clip-text bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-600"></i>
+                    <div class="flex gap-4 text-slate-400 pt-2">
+                        <a href="#" aria-label="Instagram"
+                            class="text-lg transition-transform duration-300 hover:scale-110 inline-block">
+                            <i
+                                class="fa-brands fa-instagram text-transparent bg-clip-text bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-600"></i>
                         </a>
 
-                        <a href="#" aria-label="Facebook" class="text-[#1877F2] hover:text-blue-400 text-lg transition-transform duration-300 hover:scale-110 inline-block">
+                        <a href="#" aria-label="Facebook"
+                            class="text-[#1877F2] hover:text-blue-400 text-lg transition-transform duration-300 hover:scale-110 inline-block">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
 
-                        <a href="#" aria-label="WhatsApp" class="text-brand-whatsapp hover:text-emerald-400 text-lg transition-transform duration-300 hover:scale-110 inline-block">
+                        <a href="#" aria-label="WhatsApp"
+                            class="text-brand-whatsapp hover:text-emerald-400 text-lg transition-transform duration-300 hover:scale-110 inline-block">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold text-sm uppercase mb-4 tracking-wider">Navegação</h4>
+                    <h4 class="text-white font-bold text-sm uppercase mb-4 tracking-wider">
+                        Navegação
+                    </h4>
                     <ul class="space-y-2.5 text-xs">
-                        <li><a href="#lancamentos" class="hover:text-white transition-colors">Lançamentos</a></li>
-                        <li><a href="#modelos" class="hover:text-white transition-colors">Catálogo de Modelos</a></li>
-                        <li><a href="#simulador" class="hover:text-white transition-colors">Simulador Trade-In</a></li>
-                        <li><a href="#diferenciais" class="hover:text-white transition-colors">Por Que a TechPhone?</a></li>
+                        <li>
+                            <a href="#lancamentos" class="hover:text-white transition-colors">Lançamentos</a>
+                        </li>
+                        <li>
+                            <a href="#modelos" class="hover:text-white transition-colors">Catálogo de Modelos</a>
+                        </li>
+                        <li>
+                            <a href="#simulador" class="hover:text-white transition-colors">Simulador Trade-In</a>
+                        </li>
+                        <li>
+                            <a href="#diferenciais" class="hover:text-white transition-colors">Por Que a TechPhone?</a>
+                        </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold text-sm uppercase mb-4 tracking-wider">Atendimento</h4>
+                    <h4 class="text-white font-bold text-sm uppercase mb-4 tracking-wider">
+                        Atendimento
+                    </h4>
                     <ul class="space-y-2.5 text-xs">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-brand-blue"></i> Seg a Sáb: 08h às 20h</li>
-                        <li class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-brand-whatsapp"></i> (81) 99999-9999</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-purple"></i> contato@techphoneimportados.com.br</li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-brand-orange"></i> Seg a Sáb:
+                            08h às 20h
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-brand-whatsapp"></i> (81)
+                            99999-9999
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-amber-500"></i>
+                            contato@techphoneimportados.com.br
+                        </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold text-sm uppercase mb-4 tracking-wider">Formas de Pagamento</h4>
-                    <div class="flex flex-wrap gap-2 text-2xl text-gray-500">
+                    <h4 class="text-white font-bold text-sm uppercase mb-4 tracking-wider">
+                        Formas de Pagamento
+                    </h4>
+                    <div class="flex flex-wrap gap-2 text-2xl text-slate-500">
                         <i class="fa-brands fa-cc-visa hover:text-white transition-colors" title="Visa"></i>
                         <i class="fa-brands fa-cc-mastercard hover:text-white transition-colors" title="Mastercard"></i>
-                        <i class="fa-brands fa-pix hover:text-brand-neon transition-colors" title="Pix"></i>
+                        <i class="fa-brands fa-pix hover:text-brand-orange transition-colors" title="Pix"></i>
                         <i class="fa-solid fa-barcode hover:text-white transition-colors" title="Boleto"></i>
                     </div>
-                    <p class="text-[11px] text-gray-500 mt-3">Parcelamos em até 18x em todos os cartões de crédito.</p>
+                    <p class="text-[11px] text-slate-500 mt-3">
+                        Parcelamos em até 18x em todos os cartões de crédito.
+                    </p>
                 </div>
-
             </div>
 
-            <div class="border-t border-gray-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
                 <p>&copy; 2026 TechPhone Importados. Todos os direitos reservados.</p>
                 <p>Desenvolvido para máxima conversão e velocidade.</p>
             </div>
@@ -597,4 +818,5 @@
     <!-- Script JS Customizado -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -3,17 +3,17 @@
 /* Importando a fonte Inter do Google Fonts pra deixar a tipografia moderna */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Configurações globais do corpo da página */
+/* Configurações globais do corpo da página com fundo Slate Dark */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0B0F17; /* Fundo escuro padrão (Dark Mode) */
-    color: #F3F4F6;            /* Cor do texto principal */
+    background-color: #0F172A; /* Fundo escuro em tom Slate-900 */
+    color: #F8FAFC;            /* Cor do texto principal Slate-50 */
     overflow-x: hidden;        /* Evita scroll horizontal indesejado no mobile */
 }
 
-/* Efeito Glassmorphism (efeito de vidro fosco para os cards) */
+/* Efeito Glassmorphism ajustado para fundos Slate escuros */
 .glass-card {
-    background: rgba(21, 28, 44, 0.7);
+    background: rgba(30, 41, 59, 0.7); /* Fundo semi-transparente Slate-800 */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -26,40 +26,40 @@ body {
 
 .glass-card-hover:hover {
     transform: translateY(-5px); /* Levanta o card levemente */
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.25);
+    border-color: rgba(255, 107, 0, 0.4); /* Destaque na borda em Neon Orange */
+    box-shadow: 0 12px 30px -10px rgba(255, 107, 0, 0.25); /* Sombra difusa em tom laranja */
 }
 
-/* Efeitos de brilho Neon (Glow) */
-.neon-glow-blue {
-    box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.5);
+/* Efeitos de brilho Neon (Glow) ajustados para a paleta Neon Orange */
+.neon-glow-orange {
+    box-shadow: 0 0 25px -5px rgba(255, 107, 0, 0.5);
 }
 
 .neon-glow-green {
     box-shadow: 0 0 20px -3px rgba(37, 211, 102, 0.4);
 }
 
-/* Gradiente de texto bonito para destaques */
+/* Gradiente de texto em Neon Orange & Amber para títulos destacados */
 .text-gradient {
-    background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #00F2FE 100%);
+    background: linear-gradient(135deg, #FF6B00 0%, #FF8800 50%, #F59E0B 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Scrollbar personalizada para combinar com o tema */
+/* Scrollbar personalizada combinando com os tons Slate e Laranja */
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #0B0F17;
+    background: #0F172A;
 }
 ::-webkit-scrollbar-thumb {
-    background: #1E293B;
+    background: #334155;
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #3B82F6;
+    background: #FF6B00;
 }
 
 /* Animação de pulso usada em badges/destaques */
@@ -69,4 +69,36 @@ body {
 }
 .animate-pulse-slow {
     animation: pulse-slow 3s infinite ease-in-out;
+}
+
+/* Ajustes no carrossel do Hero para responsividade e fluidez */
+#hero-carousel-track > div {
+    min-width: 100%;
+}
+
+.carousel-dot {
+    transition: all 0.3s ease;
+}
+
+/* CORREÇÃO DE LARGURA E CLIPPING DO CARROSSEL HERO */
+#hero-carousel-track > div {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex-shrink: 0 !important;
+}
+
+/* Estilização das categorias do select (optgroup) */
+select optgroup {
+    color: #f97316; /* Cor laranja (ou use a hex da sua marca, ex: var(--brand-orange)) */
+    font-weight: 800;
+    font-style: normal;
+    background-color: #0f172a; /* Fundo escuro para manter o contraste do menu */
+    padding-top: 6px;
+}
+
+/* Estilização das opções individuais para não herdarem a cor laranja */
+select option {
+    color: #ffffff; /* Texto das opções em branco */
+    font-weight: 400;
+    background-color: #0f172a;
 }
