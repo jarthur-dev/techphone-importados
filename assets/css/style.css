@@ -72,10 +72,6 @@ body {
 }
 
 /* Ajustes no carrossel do Hero para responsividade e fluidez */
-#hero-carousel-track > div {
-    min-width: 100%;
-}
-
 .carousel-dot {
     transition: all 0.3s ease;
 }
@@ -101,4 +97,26 @@ select option {
     color: #ffffff; /* Texto das opções em branco */
     font-weight: 400;
     background-color: #0f172a;
+}
+
+/* Esconde a barra de rolagem dos filtros de marca (classe usada no HTML) */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Modal de detalhes do produto */
+body.modal-open {
+    overflow: hidden; /* trava o scroll da página enquanto o modal está aberto */
+}
+
+@keyframes modal-pop {
+    from { opacity: 0; transform: translateY(12px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-pop {
+    animation: modal-pop 0.25s ease-out;
 }

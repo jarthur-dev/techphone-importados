@@ -80,13 +80,18 @@
                     <a href="#diferenciais"
                         class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Por Que
                         Nós?</a>
-                    <a href="#depoimentos"
-                        class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">Depoimentos</a>
                     <a href="#faq"
                         class="text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">FAQ</a>
                 </nav>
 
-                <!-- Botão Hambúrguer para Telas Pequenas -->
+                <!-- Botão do carrinho com contador -->
+                <button id="cart-btn" aria-label="Abrir carrinho"
+                    class="relative p-2 text-sm font-medium text-slate-300 hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span id="cart-count"
+                        class="hidden absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-brand-orange text-white text-[10px] font-bold text-center leading-[18px]"></span>
+                </button>
+
                 <button id="mobile-menu-btn" aria-label="Abrir menu"
                     class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
                     <i class="fa-solid fa-bars text-2xl"></i>
@@ -106,8 +111,6 @@
                 de Troca</a>
             <a href="#diferenciais"
                 class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Diferenciais</a>
-            <a href="#depoimentos"
-                class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Depoimentos</a>
             <a href="#faq"
                 class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Dúvidas
                 Frequentes</a>
@@ -433,7 +436,7 @@
                         </label>
                         <div class="relative group">
                             <select id="target-phone"
-                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-orange appearance-none cursor-pointer group-focus-within:border-brand-orange transition-all optgroup:text-brand-orange optgroup:font-bold optgroup:not-italic optgroup:bg-brand-slateDark option:text-white option:font-normal option:bg-brand-slateDark">
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-orange appearance-none cursor-pointer group-focus-within:border-brand-orange transition-all">
 
                                 <optgroup label="Smartphones Apple">
                                     <option value="6890" data-targetname="iPhone 15 Pro Max 256GB">iPhone 15 Pro Max -
@@ -498,131 +501,6 @@
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             <span>Enviar Proposta via WhatsApp</span>
                         </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DEPOIMENTOS / PROVA SOCIAL -->
-        <section class="py-20" id="depoimentos">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-brand-orange font-semibold text-xs tracking-widest uppercase">Prova Social</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">
-                        Quem compra com a gente, recomenda!
-                    </h2>
-                    <p class="text-slate-400 text-sm mt-2">
-                        Transparência e pontualidade no envio para todo o Brasil.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between">
-                                <div class="flex text-amber-400 text-xs gap-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span
-                                    class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
-                                    <i class="fa-solid fa-circle-check"></i> Compra Verificada
-                                </span>
-                            </div>
-                            <p class="text-slate-300 text-sm italic">
-                                "Comprei o iPhone 15 Pro Max e chegou no dia seguinte aqui no
-                                Recife! Veio lacrado na caixa, nota de garantia bonitinha.
-                                Sensacional o atendimento pelo Whats."
-                            </p>
-                        </div>
-
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-500 to-amber-500 flex items-center justify-center font-bold text-white text-sm">
-                                CS
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">Carlos Silva</h4>
-                                <p class="text-xs text-slate-400">
-                                    Recife - PE • iPhone 15 Pro Max
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between">
-                                <div class="flex text-amber-400 text-xs gap-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span
-                                    class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
-                                    <i class="fa-solid fa-circle-check"></i> Compra Verificada
-                                </span>
-                            </div>
-                            <p class="text-slate-300 text-sm italic">
-                                "Fiz a troca do meu iPhone 12 antigo pelo S24 Ultra. A
-                                avaliação do meu seminovo foi super honesta e o processo muito
-                                rápido. Recomendo demais!"
-                            </p>
-                        </div>
-
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm">
-                                AM
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">Amanda Melo</h4>
-                                <p class="text-xs text-slate-400">
-                                    Olinda - PE • Samsung S24 Ultra
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="glass-card p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between">
-                                <div class="flex text-amber-400 text-xs gap-1">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <span
-                                    class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">
-                                    <i class="fa-solid fa-circle-check"></i> Compra Verificada
-                                </span>
-                            </div>
-                            <p class="text-slate-300 text-sm italic">
-                                "Preço imbatível comparado com as lojas de shopping. Peguei o
-                                Xiaomi 14 Ultra com eles. Atendimento rápido e tiraram todas
-                                as minhas dúvidas."
-                            </p>
-                        </div>
-
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-600 to-amber-600 flex items-center justify-center font-bold text-white text-sm">
-                                RF
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">Rodrigo Ferreira</h4>
-                                <p class="text-xs text-slate-400">
-                                    Jaboatão - PE • Xiaomi 14 Ultra
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -815,8 +693,103 @@
         </div>
     </footer>
 
+    <!-- MODAL DE DETALHES DO PRODUTO (preenchido por openProductModal no script.js) -->
+    <div id="product-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4" role="dialog"
+        aria-modal="true" aria-labelledby="modal-name">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeProductModal()"></div>
+
+        <div
+            class="modal-pop relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <button id="modal-close" onclick="closeProductModal()" aria-label="Fechar detalhes"
+                class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-orange text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="flex justify-center bg-slate-800/40 rounded-2xl p-4">
+                    <img id="modal-image" src="" alt="" class="h-64 sm:h-80 object-contain rounded-xl" />
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span id="modal-badge"></span>
+                        <span id="modal-brand" class="text-xs text-slate-400 font-semibold"></span>
+                    </div>
+
+                    <h3 id="modal-name" class="text-2xl font-extrabold text-white"></h3>
+
+                    <div id="modal-specs" class="flex flex-wrap gap-2"></div>
+
+                    <div class="pt-4 border-t border-slate-800">
+                        <p id="modal-old-price" class="text-xs text-slate-500 line-through"></p>
+                        <p id="modal-price" class="text-3xl font-black text-brand-orange"></p>
+                    </div>
+
+                    <ul class="text-xs text-slate-400 space-y-1.5">
+                        <li><i class="fa-solid fa-box-open text-brand-orange w-4"></i> Original e lacrado</li>
+                        <li><i class="fa-solid fa-shield-halved text-brand-orange w-4"></i> Garantia de 12 meses</li>
+                        <li><i class="fa-solid fa-truck-fast text-brand-orange w-4"></i> Envio para todo o Brasil</li>
+                    </ul>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
+                        <button id="modal-add-cart"
+                            class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-amber-600 text-white px-4 py-3 rounded-xl font-bold text-sm shadow-md transition-all active:scale-95 cursor-pointer">
+                        </button>
+                        <a id="modal-whatsapp" href="#" target="_blank" rel="noopener"
+                            class="inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white px-4 py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Chamar no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARRINHO (PAINEL LATERAL) -->
+    <div id="cart-overlay" class="hidden fixed inset-0 z-[65] bg-black/60 backdrop-blur-sm" onclick="closeCart()"></div>
+
+    <aside id="cart-panel" aria-hidden="true" aria-label="Carrinho de compras"
+        class="fixed top-0 right-0 w-full max-w-md h-full bg-slate-900 text-white shadow-2xl z-[70] flex flex-col border-l border-slate-800 translate-x-full invisible transition-all duration-300">
+
+        <div class="flex items-center justify-between p-5 border-b border-slate-800">
+            <h2 class="text-xl font-bold flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping text-brand-orange"></i>
+                Seu carrinho
+            </h2>
+            <button onclick="closeCart()" aria-label="Fechar carrinho"
+                class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-orange text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-5">
+            <p id="cart-empty" class="text-slate-400 text-center py-12">
+                <i class="fa-solid fa-cart-shopping text-4xl mb-3 block text-slate-600"></i>
+                Seu carrinho está vazio.
+            </p>
+            <div id="cart-items" class="space-y-3"></div>
+        </div>
+
+        <div id="cart-footer" class="hidden p-5 border-t border-slate-800 space-y-3">
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-slate-400 uppercase font-semibold">Total</span>
+                <span id="cart-total" class="text-2xl font-black text-brand-orange">R$ 0,00</span>
+            </div>
+            <button onclick="checkoutWhatsApp()"
+                class="w-full inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white px-4 py-3.5 rounded-xl font-bold text-sm transition-all active:scale-95 cursor-pointer">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Finalizar pedido no WhatsApp</span>
+            </button>
+            <button onclick="clearCart()"
+                class="w-full text-xs text-slate-500 hover:text-red-400 transition-colors cursor-pointer">
+                Limpar carrinho
+            </button>
+        </div>
+    </aside>
+
     <!-- Script JS Customizado -->
     <script src="assets/js/script.js"></script>
-</body>
 
+ </body>
 </html>
