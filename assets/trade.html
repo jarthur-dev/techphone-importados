@@ -1,0 +1,133 @@
+<!-- SIMULADOR DE TRADE-IN / TROCA DE USADO -->
+        <section class="py-20 bg-gradient-to-b from-brand-card/40 to-brand-slateDark border-y border-slate-800"
+            id="simulador">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-orange/30 relative overflow-hidden">
+                    <div
+                        class="absolute -right-10 -bottom-10 w-60 h-60 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none">
+                    </div>
+
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span
+                            class="bg-brand-orange/20 text-brand-orange border border-brand-orange/40 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            Programa de Troca Smart
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+                            Simulador de Trade-In
+                        </h2>
+                        <p class="text-slate-400 text-sm mt-2">
+                            Digite os dados do seu aparelho atual e veja quanto falta para pegar um novo lacrado!
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+
+                        <div class="space-y-2 md:col-span-1">
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                                1. Qual seu aparelho atual?
+                            </label>
+                            <input type="text" id="current-phone-name" placeholder="Ex: iPhone 12 128GB"
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 px-4 text-sm text-white focus:outline-none focus:border-brand-orange transition-all placeholder:text-slate-500" />
+                        </div>
+
+                        <div class="space-y-2 md:col-span-1">
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                                Valor aproximado hoje (R$)
+                            </label>
+                            <input type="number" id="current-phone-value" min="100" max="20000" step="50"
+                                placeholder="Ex: 1800"
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 px-4 text-sm text-white focus:outline-none focus:border-brand-orange transition-all placeholder:text-slate-500" />
+                        </div>
+
+                        <div class="space-y-2 md:col-span-1">
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                                2. Estado de conservação
+                            </label>
+                            <div class="relative group">
+                                <select id="phone-condition"
+                                    class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-orange appearance-none cursor-pointer group-focus-within:border-brand-orange transition-all">
+                                    <option value="1.0">Excelente (Sem marcas, bateria 85%+)</option>
+                                    <option value="0.85" selected>Bom (Marcas leves de uso normal)</option>
+                                    <option value="0.7">Regular (Marcas visíveis ou bateria baixa)</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none transition-transform duration-300 group-focus-within:rotate-180 group-focus-within:text-brand-orange text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-2">
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                            3. Qual aparelho deseja adquirir?
+                        </label>
+                        <div class="relative group">
+                            <select id="target-phone"
+                                class="w-full bg-brand-slateDark border border-slate-700 rounded-xl py-3.5 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-brand-orange appearance-none cursor-pointer group-focus-within:border-brand-orange transition-all">
+
+                                <optgroup label="Smartphones Apple">
+                                    <option value="6890" data-targetname="iPhone 15 Pro Max 256GB">iPhone 15 Pro Max -
+                                        R$ 6.890,00</option>
+                                    <option value="5600" data-targetname="iPhone 15 Pro 128GB">iPhone 15 Pro - R$
+                                        5.600,00</option>
+                                    <option value="3790" data-targetname="iPhone 14 128GB">iPhone 14 - R$ 3.790,00
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="Smartphones Samsung">
+                                    <option value="3899" data-targetname="Samsung Galaxy S24 Ultra 512GB">Samsung Galaxy
+                                        S24 Ultra - R$ 3.899,00</option>
+                                </optgroup>
+
+                                <optgroup label="Smartphones Xiaomi">
+                                    <option value="4300" data-targetname="Redmi Magic 11 Pro 512GB">Redmi Magic 11 Pro -
+                                        R$ 4.300,00</option>
+                                    <option value="3353" data-targetname="Redmi Note 17 Pro Max 512GB">Redmi Note 17 Pro
+                                        Max - R$ 3.353,00</option>
+                                    <option value="1500" data-targetname="Redmi Note 15 PRO 256GB">Redmi Note 15 PRO -
+                                        R$ 1.500,00</option>
+                                </optgroup>
+
+                                <optgroup label="Tablets">
+                                    <option value="6000" data-targetname="Apple iPad 11 512GB">Apple iPad 11 - R$
+                                        6.000,00</option>
+                                    <option value="6000" data-targetname="Samsung Galaxy Tab S11 512GB">Samsung Galaxy
+                                        Tab S11 - R$ 6.000,00</option>
+                                    <option value="1800" data-targetname="Poco Pad X1 512GB">Poco Pad X1 - R$ 1.800,00
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="Acessórios">
+                                    <option value="2300" data-targetname="AirPods Pro 3">AirPods Pro 3 - R$ 2.300,00
+                                    </option>
+                                    <option value="360" data-targetname="Samsung Galaxy Buds Core">Samsung Galaxy Buds
+                                        Core - R$ 360,00</option>
+                                </optgroup>
+                            </select>
+                            <i
+                                class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none transition-transform duration-300 group-focus-within:rotate-180 group-focus-within:text-brand-orange text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div id="estimator-result"
+                        class="mt-8 p-6 bg-brand-slateDark/80 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+                        <div>
+                            <p class="text-xs text-slate-400 uppercase font-semibold">
+                                Estimativa de Avaliação do Seu Usado
+                            </p>
+                            <p class="text-2xl font-black text-brand-orange" id="estimated-value">
+                                R$ 0,00
+                            </p>
+                            <p class="text-xs text-slate-400 mt-1" id="difference-text">
+                                Informe o valor do seu modelo para calcularmos a diferença.
+                            </p>
+                        </div>
+
+                        <button id="send-tradein-whatsapp"
+                            class="w-full sm:w-auto px-6 py-3.5 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2 transform active:scale-95">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Enviar Proposta via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>

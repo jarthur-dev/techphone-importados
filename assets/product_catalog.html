@@ -1,0 +1,55 @@
+<!-- CATÁLOGO DE PRODUTOS COM BUSCA E FILTROS DINÂMICOS -->
+        <section class="py-20" id="modelos">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                    <div>
+                        <span class="text-brand-orange font-semibold text-xs tracking-widest uppercase">Catálogo
+                            Atualizado</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">
+                            Smartphones em Destaque
+                        </h2>
+                    </div>
+
+                    <!-- Campo de Busca em Tempo Real -->
+                    <div class="relative w-full md:w-72">
+                        <input type="text" id="catalog-search" placeholder="Buscar modelo ex: S24 Ultra..."
+                            class="w-full bg-brand-card border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors" />
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- Botões de Filtro por Marca -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar" id="brand-filters">
+                    <button
+                        class="filter-btn active px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap bg-brand-orange text-white shadow-md"
+                        data-category="all">
+                        Todos os Modelos
+                    </button>
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="apple">
+                        <i class="fa-brands fa-apple mr-1"></i> Apple
+                    </button>
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="samsung">
+                        Samsung Galaxy
+                    </button>
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="xiaomi">
+                        Xiaomi & Poco
+                    </button>
+                    <button
+                        class="filter-btn px-6 py-2.5 rounded-xl font-semibold text-sm transition-all whitespace-nowrap glass-card text-slate-300 hover:text-white hover:border-brand-orange"
+                        data-category="acessorios">
+                        Acessórios Premium
+                    </button>
+                </div>
+
+                <!-- Container onde os produtos são inseridos pelo JS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                    <!-- Conteúdo gerado dinamicamente via script.js -->
+                </div>
+            </div>
+        </section>
