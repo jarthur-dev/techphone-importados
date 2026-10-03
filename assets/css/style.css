@@ -1,102 +1,113 @@
 /* ESTILOS CUSTOMIZADOS E VARIÁVEIS VISUAIS */
 
-/* Importando a fonte Inter do Google Fonts pra deixar a tipografia moderna */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* A fonte Inter agora é carregada no <head> do index.html (preconnect + link),
+   por isso o @import que ficava aqui foi removido. */
 
-/* Configurações globais do corpo da página com fundo Slate Dark */
+/* ==========================================
+   VARIÁVEIS DA MARCA (paleta Neon Orange & Slate)
+   Para mudar uma cor do site no CSS, troque aqui.
+   ========================================== */
+:root {
+    --brand-orange: #FF6B00;   /* Laranja Neon principal */
+    --brand-neon: #FF8800;     /* Laranja Neon secundário */
+    --brand-amber: #F59E0B;    /* Âmbar do final do gradiente */
+    --bg-dark: #0F172A;        /* Fundo Slate-900 */
+    --border-slate: #334155;   /* Bordas e detalhes Slate-700 */
+    --whatsapp: #25D366;
+
+    /* Mesmas cores em canais RGB, para usar com transparência:
+       rgb(var(--brand-orange-rgb) / 0.4) */
+    --brand-orange-rgb: 255 107 0;
+    --card-rgb: 30 41 59;      /* Slate-800 */
+    --whatsapp-rgb: 37 211 102;
+
+    /* Inputs, selects e barra de rolagem nativos já saem no tema escuro */
+    color-scheme: dark;
+}
+
+/* ==========================================
+   BASE
+   ========================================== */
+html {
+    scroll-padding-top: 5rem;  /* seções não ficam escondidas atrás do header fixo (h-20) */
+    scrollbar-gutter: stable;  /* a página não "pula" quando o modal trava o scroll */
+}
+
+/* Cor do texto e demais classes do body vêm do Tailwind no index.html */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0F172A; /* Fundo escuro em tom Slate-900 */
-    color: #F8FAFC;            /* Cor do texto principal Slate-50 */
+    background-color: var(--bg-dark);
     overflow-x: hidden;        /* Evita scroll horizontal indesejado no mobile */
 }
 
+/* Contorno visível para quem navega pelo teclado (Tab) */
+:focus-visible {
+    outline: 2px solid var(--brand-orange);
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   CARDS E EFEITOS
+   ========================================== */
+
 /* Efeito Glassmorphism ajustado para fundos Slate escuros */
 .glass-card {
-    background: rgba(30, 41, 59, 0.7); /* Fundo semi-transparente Slate-800 */
+    background: rgb(var(--card-rgb) / 0.7); /* Fundo semi-transparente Slate-800 */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgb(255 255 255 / 0.08);
 }
 
 /* Animação suave nos cards ao passar o mouse */
 .glass-card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-card-hover:hover {
-    transform: translateY(-5px); /* Levanta o card levemente */
-    border-color: rgba(255, 107, 0, 0.4); /* Destaque na borda em Neon Orange */
-    box-shadow: 0 12px 30px -10px rgba(255, 107, 0, 0.25); /* Sombra difusa em tom laranja */
+/* Só em dispositivos com mouse: no celular o card não fica "levantado" depois do toque */
+@media (hover: hover) {
+    .glass-card-hover:hover {
+        transform: translateY(-5px); /* Levanta o card levemente */
+        border-color: rgb(var(--brand-orange-rgb) / 0.4); /* Destaque na borda em Neon Orange */
+        box-shadow: 0 12px 30px -10px rgb(var(--brand-orange-rgb) / 0.25); /* Sombra difusa em tom laranja */
+    }
 }
 
-/* Efeitos de brilho Neon (Glow) ajustados para a paleta Neon Orange */
+/* Efeitos de brilho Neon (Glow) */
 .neon-glow-orange {
-    box-shadow: 0 0 25px -5px rgba(255, 107, 0, 0.5);
+    box-shadow: 0 0 25px -5px rgb(var(--brand-orange-rgb) / 0.5);
 }
 
 .neon-glow-green {
-    box-shadow: 0 0 20px -3px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 0 20px -3px rgb(var(--whatsapp-rgb) / 0.4);
 }
 
 /* Gradiente de texto em Neon Orange & Amber para títulos destacados */
 .text-gradient {
-    background: linear-gradient(135deg, #FF6B00 0%, #FF8800 50%, #F59E0B 100%);
+    background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-neon) 50%, var(--brand-amber) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* ==========================================
+   BARRA DE ROLAGEM
+   ========================================== */
 
 /* Scrollbar personalizada combinando com os tons Slate e Laranja */
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #0F172A;
+    background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-    background: #334155;
+    background: var(--border-slate);
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #FF6B00;
-}
-
-/* Animação de pulso usada em badges/destaques */
-@keyframes pulse-slow {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.85; transform: scale(1.03); }
-}
-.animate-pulse-slow {
-    animation: pulse-slow 3s infinite ease-in-out;
-}
-
-/* Ajustes no carrossel do Hero para responsividade e fluidez */
-.carousel-dot {
-    transition: all 0.3s ease;
-}
-
-/* CORREÇÃO DE LARGURA E CLIPPING DO CARROSSEL HERO */
-#hero-carousel-track > div {
-    min-width: 100% !important;
-    max-width: 100% !important;
-    flex-shrink: 0 !important;
-}
-
-/* Estilização das categorias do select (optgroup) */
-select optgroup {
-    color: #f97316; /* Cor laranja (ou use a hex da sua marca, ex: var(--brand-orange)) */
-    font-weight: 800;
-    font-style: normal;
-    background-color: #0f172a; /* Fundo escuro para manter o contraste do menu */
-    padding-top: 6px;
-}
-
-/* Estilização das opções individuais para não herdarem a cor laranja */
-select option {
-    color: #ffffff; /* Texto das opções em branco */
-    font-weight: 400;
-    background-color: #0f172a;
+    background: var(--brand-orange);
 }
 
 /* Esconde a barra de rolagem dos filtros de marca (classe usada no HTML) */
@@ -108,7 +119,58 @@ select option {
     display: none;
 }
 
-/* Modal de detalhes do produto */
+/* ==========================================
+   ANIMAÇÕES
+   ========================================== */
+
+/* Animação de pulso usada em badges/destaques */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.03); }
+}
+.animate-pulse-slow {
+    animation: pulse-slow 3s infinite ease-in-out;
+}
+
+/* ==========================================
+   CARROSSEL DO HERO
+   ========================================== */
+.carousel-dot {
+    transition: all 0.3s ease;
+}
+
+/* CORREÇÃO DE LARGURA E CLIPPING DO CARROSSEL HERO
+   (se quiser limpar: comente este bloco e teste se o carrossel continua certo,
+   pois o carousel.js já aplica w-full, min-w-full e flex-shrink-0 nos slides) */
+#hero-carousel-track > div {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex-shrink: 0 !important;
+}
+
+/* ==========================================
+   SELECT (SIMULADOR DE TROCA)
+   ========================================== */
+
+/* Estilização das categorias do select (optgroup) */
+select optgroup {
+    color: var(--brand-orange);
+    font-weight: 800;
+    font-style: normal;
+    background-color: var(--bg-dark); /* Fundo escuro para manter o contraste do menu */
+    padding-top: 6px;
+}
+
+/* Estilização das opções individuais para não herdarem a cor laranja */
+select option {
+    color: #ffffff; /* Texto das opções em branco */
+    font-weight: 400;
+    background-color: var(--bg-dark);
+}
+
+/* ==========================================
+   MODAL DE DETALHES DO PRODUTO
+   ========================================== */
 body.modal-open {
     overflow: hidden; /* trava o scroll da página enquanto o modal está aberto */
 }
@@ -119,4 +181,22 @@ body.modal-open {
 }
 .modal-pop {
     animation: modal-pop 0.25s ease-out;
+}
+
+/* ==========================================
+   ACESSIBILIDADE: MENOS MOVIMENTO
+   Para quem desativou animações no sistema (inclui o scroll suave)
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
